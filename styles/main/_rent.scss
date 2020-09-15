@@ -1,0 +1,61 @@
+#rent-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 3.25rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 4rem;
+    }
+
+    .rent-info_wrapper {
+        p {
+            margin-left: 20px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: 900px) {
+            display: flex;
+
+            div:not(:first-child) {
+                margin-left: 3rem;
+
+                @media screen and (min-width: 1280px) {
+                    margin-left: 5rem;
+                }
+            }
+        }
+    }
+
+    .header-3 {
+        margin-top: 2rem;
+
+        @media screen and (min-width: 900px) {
+            margin-top: 0;
+        }
+    }
+
+    .rent-subject {
+        .header-3 {
+            margin-top: 0;
+        }
+    }
+}
+
+#delivery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+}

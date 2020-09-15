@@ -1,0 +1,603 @@
+#catalog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        align-self: flex-start;
+        justify-self: start;
+    }
+}
+
+.catalog_wrapper {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 50px;
+
+    @media screen and (min-width: 666px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 80px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    p {
+        margin-right: 2rem;
+    }
+}
+
+.machine {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @media screen and (min-width: 666px) {
+        width: auto;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+            align-self: center;
+            position: relative;
+        }
+    }
+
+    p {
+        align-self: center;
+
+        @media screen and (min-width: 666px) {
+            align-self: center;
+            margin-top: 25px;
+        }
+    }
+}
+
+img[class$="-img"] {
+    @media screen and (min-width: 1024px) {
+        transition: all linear .2s;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 10px $light-orange);
+            cursor: pointer;
+        }
+    }
+}
+
+#catalog p:hover {
+    @media screen and (min-width: 1024px) {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+#catalog img:hover+p {
+    @media screen and (min-width: 1024px) {
+        text-decoration: underline;
+    }
+}
+
+// .......... фронтальный погрузчик ..........
+
+.frontpogr {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            top: 20px;
+            left: -15px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            top: 32px;
+            left: -26px;
+
+            &:hover {
+                top: 20px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 1024px) {
+            left: -29px;
+        }
+    }
+}
+
+// .......... телескопический погрузчик ..........
+
+.telepogr {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            left: -20px;
+            top: 0;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 28px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: 0;
+        }
+    }
+}
+
+// .......... бульдозер ..........
+
+.buldozer {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -22px;
+            top: 15px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            left: -32px;
+            top: 29px;
+
+            &:hover {
+                top: 17px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 37px;
+
+            &:hover {
+                top: 25px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: -13px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -42px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: -23px;
+        }
+    }
+}
+
+// .......... экскаваторы-погрузчики ..........
+
+.expo {
+    &-img {
+        min-width: 140px;
+        max-width: 140px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -12px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 230px;
+            max-width: 230px;
+            left: -30px;
+            top: 0;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 13px;
+            left: -50px;
+
+            &:hover {
+                top: 1px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 60px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: 31px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: 20px;
+        }
+    }
+}
+
+// .......... экскаваторы ..........
+
+.excavator {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -20px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            left: -32px;
+            top: 0px;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -22px;
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: -4px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -33px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -24px;
+        }
+    }
+}
+
+// .......... каток ..........
+
+.katok {
+    &-img {
+        min-width: 103px;
+        max-width: 103px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -16px;
+            top: 10px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            top: 19px;
+
+            &:hover {
+                top: 7px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -33px;
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: -22px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -52px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -63px;
+        }
+    }
+}
+
+// .......... самосвал ..........
+
+.samosval {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -32px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            left: -40px;
+            top: 0px;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: -17px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -47px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -45px;
+        }
+    }
+}
+
+// .......... длинномер ..........
+
+.dlinomer {
+    &-img {
+        min-width: 130px;
+        max-width: 130px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            top: 17px;
+            left: -15px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 230px;
+            max-width: 230px;
+            top: 14px;
+            left: -8px;
+
+            &:hover {
+                top: 2px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 14px;
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 3px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -26px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -28px;
+        }
+    }
+}
+
+// .......... фреза ..........
+
+.freza {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            top: 15px;
+            left: -15px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            left: -30px;
+
+            &:hover {
+                top: 3px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 4px;
+            left: -33px;
+
+            &:hover {
+                top: -8px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 17px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -12px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -11px;
+        }
+    }
+}
+
+// .......... манипулятор ..........
+
+.manipulator {
+    &-img {
+        min-width: 103px;
+        max-width: 103px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            top: 2px;
+            left: -17px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 155px;
+            max-width: 155px;
+            top: 0px;
+            left: -25px;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 33px;
+            left: -33px;
+
+            &:hover {
+                top: 21px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 18px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -13px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -22px;
+        }
+    }
+}
+
+// .......... автокран ..........
+
+.avtokran {
+    &-img {
+        min-width: 100px;
+        max-width: 100px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -28px;
+            top: 43px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 166px;
+            max-width: 166px;
+            top: 38px;
+            left: -30px;
+
+            &:hover {
+                top: 26px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 39px;
+
+            &:hover {
+                top: 27px;
+            }
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: -12px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -41px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 0px;
+        }
+    }
+}
+
+// .......... молот ..........
+
+.molot {
+    &-img {
+        min-width: 103px;
+        max-width: 103px;
+        height: auto;
+
+        @media screen and (min-width: 666px) {
+            left: -11px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-width: 141px;
+            max-width: 141px;
+            left: -27px;
+            top: 0;
+
+            &:hover {
+                top: -12px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -36px;
+        }
+    }
+
+    .text {
+        @media screen and (min-width: 666px) {
+            left: 12px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -20px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -28px;
+        }
+    }
+}

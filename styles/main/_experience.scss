@@ -1,0 +1,39 @@
+section#experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .experience_wrapper {
+        @media screen and (min-width: 900px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+            column-gap: 64px;
+
+            ul {
+                margin-left: 0;
+            }
+
+            h3:first-of-type {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            h3:last-of-type {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            ul:first-of-type {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            ul:last-of-type {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+        }
+    }
+}

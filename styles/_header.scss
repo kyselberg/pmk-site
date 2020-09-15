@@ -1,0 +1,173 @@
+.logo_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    top: 7px;
+
+    div {
+        order: 3;
+    }
+
+    p {
+        color: $lighter-grey;
+
+        @media screen and (min-width: 1280px) {
+            position: relative;
+            top: -10px;
+        }
+    }
+
+    @media screen and (min-width: 450px) {
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: 600px) {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .navigation__button {
+        display: block;
+        padding: .3rem 1.3rem;
+        background-color: $dark-grey;
+        border: 10px solid $logo-orange;
+        border-radius: 10px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: border-color .3s ease-in-out;
+        margin: 0;
+        order: 2;
+
+        @media screen and (min-width: 600px) {
+            order: 1;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: .8rem 1.8rem;
+
+            &:hover {
+                cursor: pointer;
+                border-color: $lighter-grey;
+                filter: drop-shadow(0px 0px 4px $light-orange);
+            }
+        }
+    }
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    order: 1;
+
+    @media screen and (min-width: 600px) {
+        order: 2;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 200px;
+    }
+}
+
+#header-front {
+    position: fixed;
+    background: $dark-grey;
+    top: -20px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 170px;
+    width: 100%;
+    z-index: 19;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media screen and (min-width: 600px) {
+        height: 80px;
+    }
+
+    @media screen and (min-width: 1800px) {
+        top: -30px;
+    }
+
+    @media screen and (min-width: 2100px) {
+        top: -35px;
+    }
+}
+
+#header-back {
+    z-index: 18;
+    background: $logo-orange;
+    top: -10px;
+    position: fixed;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 170px;
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media screen and (min-width: 600px) {
+        height: 80px;
+    }
+
+    @media screen and (min-width: 1800px) {
+        top: -20px;
+    }
+
+    @media screen and (min-width: 2100px) {
+        top: -25px;
+    }
+}
+
+#hero {
+    background-image: url("../images/tractor.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+
+
+    @media screen and (min-width: 600px) {
+        align-items: center;
+        top: 0;
+        height: 35vh;
+    }
+
+    &::after {
+        width: 100%;
+        height: 270px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        content: '';
+        background: rgba(44, 44, 44, 0.7);
+
+        @media screen and (min-width: 600px) {
+            height: 35vh;
+        }
+    }
+
+    .hero-text {
+        @include font-prop($h1-mobile-size, $h1-mobile-weight, $h1-mobile-height);
+        color: $lighter-grey;
+        z-index: 11;
+
+        @media screen and (min-width: 600px) {
+            @include font-prop($h1-tablet_l-size, $h1-tablet_l-weight, $h1-tablet_l-height);
+        }
+
+        @media screen and (min-width: 1280px) {
+            @include font-prop($h1-desktop-size, $h1-desktop-weight, $h1-desktop-height);
+        }
+    }
+}

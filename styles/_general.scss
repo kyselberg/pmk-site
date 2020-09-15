@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@mixin font-prop($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    overflow: hidden;
+
+    @media screen and (min-width: 400px) {
+        grid-template-columns: 2rem 1fr 2rem;
+    }
+
+    @media screen and (min-width: 450px) {
+        grid-template-columns: 3rem 1fr 3rem;
+    }
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 5rem 1fr 5rem;
+    }
+
+    @media screen and (min-width: 700px) {
+        grid-template-columns: 6rem 1fr 6rem;
+    }
+
+    @media screen and (min-width: 1500px) {
+        grid-template-columns: 7rem 1fr 7rem;
+    }
+
+    @media screen and (min-width: 1600px) {
+        grid-template-columns: 8rem 1fr 8rem;
+    }
+
+    @media screen and (min-width: 1700px) {
+        grid-template-columns: 10rem 1fr 10rem;
+    }
+
+    @media screen and (min-width: 1800px) {
+        grid-template-columns: 12rem 1fr 12rem;
+    }
+
+    @media screen and (min-width: 1900px) {
+        grid-template-columns: 14rem 1fr 14rem;
+    }
+
+    @media screen and (min-width: 2000px) {
+        grid-template-columns: 16rem 1fr 16rem;
+    }
+
+    @media screen and (min-width: 2100px) {
+        grid-template-columns: 18rem 1fr 18rem;
+    }
+
+    @media screen and (min-width: 2200px) {
+        grid-template-columns: 20rem 1fr 20rem;
+    }
+
+    @media screen and (min-width: 2300px) {
+        grid-template-columns: 22rem 1fr 22rem;
+    }
+
+    @media screen and (min-width: 2400px) {
+        grid-template-columns: 24rem 1fr 24rem;
+    }
+}
+
+.header-2 {
+    @include font-prop($h2-mobile-size, $h2-mobile-weight, $h2-mobile-height);
+    margin-bottom: 2.25rem;
+    color: $dark-grey;
+    border-bottom: 10px solid #f60;
+    position: relative;
+
+    @media screen and (min-width: 600px) {
+        @include font-prop($h2-tablet_l-size, $h2-tablet_l-weight, $h2-tablet_l-height);
+    }
+
+    @media screen and (min-width: 1280px) {
+        @include font-prop($h2-desktop-size, $h2-desktop-weight, $h2-desktop-height);
+    }
+}
+
+.header-3 {
+    @include font-prop($h3-mobile-size, $h3-mobile-weight, $h3-mobile-height);
+    margin-bottom: 2rem;
+    color: $dark-grey;
+
+    @media screen and (min-width: 600px) {
+        @include font-prop($h3-tablet_l-size, $h3-tablet_l-weight, $h3-tablet_l-height);
+    }
+
+    @media screen and (min-width: 1280px) {
+        @include font-prop($h3-desktop-size, $h3-desktop-weight, $h3-desktop-height);
+    }
+}
+
+.header-4 {
+    @include font-prop($h4-mobile-size, $h4-mobile-weight, $h4-mobile-height);
+    margin: 1.875rem 0;
+    color: $lighter-grey;
+
+    @media screen and (min-width: 600px) {
+        @include font-prop($h4-tablet_l-size, $h4-tablet_l-weight, $h4-tablet_l-height);
+    }
+
+    @media screen and (min-width: 1280px) {
+        @include font-prop($h4-desktop-size, $h4-desktop-weight, $h4-desktop-height);
+    }
+}
+
+.text {
+    @include font-prop($text-mobile-size, $text-mobile-weight, $text-mobile-height);
+
+    @media screen and (min-width: 1024px) {
+        @include font-prop($text-desktop-size, $text-desktop-weight, $text-desktop-height);
+    }
+}
+
+section {
+    margin-top: 2.25rem;
+    grid-column: 2 / 3;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+ul {
+    list-style-position: inside;
+    list-style: none;
+    margin-left: 10px;
+
+    &:first-of-type {
+        margin-bottom: 2rem;
+    }
+
+    li {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    li.orange-dot::before {
+        content: url(../icons/dot.svg);
+        display: inline-block;
+        width: 1em;
+        position: absolute;
+        left: -10px;
+        top: -3px;
+    }
+
+    li.grey-square::before {
+        content: url(../icons/square.svg);
+        display: inline-block;
+        width: 1em;
+        position: absolute;
+        left: -10px;
+        top: -3px;
+    }
+}
+
+p {
+    position: relative;
+}
+
+.first-item::before {
+    content: '01';
+    font-size: $h3-mobile-size;
+    font-weight: $h3-mobile-weight;
+    color: $light-orange;
+    position: absolute;
+    padding-left: 12px;
+    z-index: -5;
+    top: -10px;
+    left: -2rem;
+
+    @media screen and (min-width: 666px) {
+        font-size: $h3-tablet_l-size;
+        font-weight: $h3-tablet_l-weight;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: $h3-desktop-size;
+        font-weight: $h3-desktop-weight;
+    }
+}
+
+.second-item::before {
+    content: '02';
+    font-size: $h3-mobile-size;
+    font-weight: $h3-mobile-weight;
+    color: $light-orange;
+    position: absolute;
+    padding-left: 12px;
+    z-index: -5;
+    top: -10px;
+    left: -2.1rem;
+
+    @media screen and (min-width: 666px) {
+        font-size: $h3-tablet_l-size;
+        font-weight: $h3-tablet_l-weight;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: $h3-desktop-size;
+        font-weight: $h3-desktop-weight;
+    }
+}
+
+.third-item::before {
+    content: '03';
+    font-size: $h3-mobile-size;
+    font-weight: $h3-mobile-weight;
+    color: $light-orange;
+    position: absolute;
+    z-index: -5;
+    top: -10px;
+    left: -1.4rem;
+
+    @media screen and (min-width: 666px) {
+        font-size: $h3-tablet_l-size;
+        font-weight: $h3-tablet_l-weight;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: $h3-desktop-size;
+        font-weight: $h3-desktop-weight;
+    }
+}
+
+.forth-item::before {
+    content: '04';
+    font-size: $h3-mobile-size;
+    font-weight: $h3-mobile-weight;
+    color: $light-orange;
+    position: absolute;
+    z-index: -5;
+    top: -10px;
+    left: -1.4rem;
+
+    @media screen and (min-width: 666px) {
+        font-size: $h3-tablet_l-size;
+        font-weight: $h3-tablet_l-weight;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: $h3-desktop-size;
+        font-weight: $h3-desktop-weight;
+    }
+}
+
+main {
+    position: relative;
+    top: 33px;
+
+    @media screen and (min-width: 600px) {
+        top: 0;
+    }
+}
